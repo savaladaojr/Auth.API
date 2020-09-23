@@ -7,7 +7,7 @@
 ![GitHub issues](https://img.shields.io/github/issues/savaladaojr/Auth.API)
 ![GitHub issues](https://img.shields.io/github/issues-raw/savaladaojr/Auth.API)
 
-<br/><br/>
+<br/>
 
 ## Description
 
@@ -125,7 +125,7 @@ So, later I'll create a project to consuming this API and show how to use it in 
 
 ## Contributing
 
-1. Fork it (<https://github.com/savaladaojr/CommanderAPI/fork>);
+1. Fork it (<https://github.com/savaladaojr/Auth.API/fork>);
 2. Create your feature branch (e.g. `git checkout -b feature/fooBar`);
 3. Commit your changes (e.g. `git commit -am 'Add some fooBar'`);
 4. Push to the branch (e.g. `git push origin feature/fooBar`);
