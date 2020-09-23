@@ -143,7 +143,7 @@ namespace Auth.Demo.Repositories
 													new User { Id = 99, Name = "Kirby Goodman", Email = "dignissim@elementumategestas.net", Username = "O..Nunez", Password = "ZIB97TAR2CB" },
 													new User { Id = 100, Name = "Clementine Greer", Email = "a@aenimSuspendisse.net", Username = "G..Clay", Password = "OJR43CQY1KF" },
 													new User { Id = 101, Name = "Sergio Valadão Junior", Email = "a@aenimSuspendisse.net", Username = "S..Junior", Password = "12345678" },
-													new User { Id = 101, Name = "Sergio Valadão", Email = "s@aenimSuspendisse.net", Username = "S..Valadao", Password = "12345678" }
+													new User { Id = 102, Name = "Sergio Valadão", Email = "s@aenimSuspendisse.net", Username = "S..Valadao", Password = "12345678" }
 												};
 
 
