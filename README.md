@@ -118,7 +118,7 @@ To run some tests on the API, I recommend that you download [Postman](https://ww
 
 I'm using Postman! So I have already prepared a file with all requests for the API. You can find this file (Auth.API.postman_collection.json) in the repository.
 
-So, later I'll create a project to consuming this API and show how to use it in a different approach.
+Later I will create a project to consume this API and show how to use it in different approaches. Bye now!
 
 <br/><br/><br/>
 
