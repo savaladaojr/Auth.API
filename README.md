@@ -19,13 +19,19 @@ The Auti.API will handle the authentication. Once the user is authenticated, it 
 
 After the authentication, the API will send a JSON Web Token back to the caller. This token should be used by the caler in order to make subsequent calls to the API.
 
-
 If you would like to know more about JSON Web Token, you can access the [Wikipedia article](https://en.wikipedia.org/wiki/JSON_Web_Token/) or search on the internet.
+
+<hr>
+
+There is an option to use your Token generator, using Custom Authentication manager and custom authentication handler also.
+But, I recommend you to use JWT.
+
 
 ### Features
 
 - [X] Authenticate users
 - [X] Generate JSON Web Token
+- [X] Custom Token Generator
 - [X] Protected API Verbs
 - [X] Autorize access to specific API Verbs
 
