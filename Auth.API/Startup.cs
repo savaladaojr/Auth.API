@@ -31,11 +31,11 @@ namespace Auth.Demo
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
-            //Repository Pattern
-            services.AddSingleton<IUserRepository, MockUserRepository>();
-
             #region JWT Authentication
             /*
+            //Repository Pattern
+            services.AddScoped<IUserRepository, MockUserRepository>();
+
             //Get tokenKey from the configuration
             var tokenKey = Configuration.GetValue<string>("TokenKey");
             var key = Encoding.ASCII.GetBytes(tokenKey);
@@ -63,6 +63,9 @@ namespace Auth.Demo
             #endregion
 
             #region CustomAuthentication
+            //Repository Pattern
+            services.AddSingleton<IUserRepository, MockUserRepository>();
+
             var tokenKey = Configuration.GetValue<string>("TokenKey");
             var key = Encoding.ASCII.GetBytes(tokenKey);
 
