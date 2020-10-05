@@ -126,6 +126,16 @@ I'm using Postman! So I have already prepared a file with all requests for the A
 
 Later I will create a project to consume this API and show how to use it in different approaches. Bye now!
 
+
+## Concluding ##
+This API covers two ways of managing authentication: 
+
+**_The first one is through JWT token_**;</br>
+The other is a custom token generator (GUID based).
+
+For the custom implementation, we can use anything as an alternatives! Since it will be triggered every time a API Verb endpoint is called; as long as it is annotated with the Authorize attribute. So, if we wouldn't like to use the authentication check in an API Verb, we just need to annotate it with the AllowAnonymous attribute.
+
+To conclude, the most important thing here is that the authentication handler and the middleware keep the code clean, readably, and following the standards design.
 <br/><br/><br/>
 
 
