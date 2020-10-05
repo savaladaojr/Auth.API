@@ -3,6 +3,8 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Auth.API.AuthenticationManager.CustomToken;
+using Auth.API.AuthenticationManager.JWT;
 using Auth.Demo.Repositories;
 using Auth.Demo.Repositories.Interfaces;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
@@ -30,8 +32,10 @@ namespace Auth.Demo
         public void ConfigureServices(IServiceCollection services)
         {
             //Repository Pattern
-            services.AddScoped<IUserRepository, MockUserRepository>();
+            services.AddSingleton<IUserRepository, MockUserRepository>();
 
+            #region JWT Authentication
+            /*
             //Get tokenKey from the configuration
             var tokenKey = Configuration.GetValue<string>("TokenKey");
             var key = Encoding.ASCII.GetBytes(tokenKey);
@@ -55,6 +59,16 @@ namespace Auth.Demo
             });
 
             services.AddSingleton<IJWTAuthenticationManager>(new JWTAuthenticationManager(Configuration, new MockUserRepository(), tokenKey));
+            */
+            #endregion
+
+            #region CustomAuthentication
+            var tokenKey = Configuration.GetValue<string>("TokenKey");
+            var key = Encoding.ASCII.GetBytes(tokenKey);
+
+            services.AddAuthentication("Basic").AddScheme<BasicAuthenticationOptions, CustomAuthenticationHandler>("Basic",  null);
+            services.AddSingleton<ICustomAuthenticationManager, CustomAuthenticationManager>();
+            #endregion
 
             services.AddControllers();
 

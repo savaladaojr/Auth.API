@@ -3,6 +3,8 @@ using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using Auth.API.AuthenticationManager.CustomToken;
+using Auth.API.AuthenticationManager.JWT;
 using Auth.Demo.DTModels;
 using Auth.Demo.Models;
 using Auth.Demo.Repositories.Interfaces;
@@ -16,10 +18,12 @@ namespace Auth.Demo.Controllers
     [ApiController]
     public class NameController : ControllerBase
     {
-        private readonly IJWTAuthenticationManager _authenticationManager;
+        //private readonly IJWTAuthenticationManager _authenticationManager;
+        private readonly ICustomAuthenticationManager _authenticationManager;
         private readonly IUserRepository _userRepository;
 
-        public NameController(IJWTAuthenticationManager authenticationManager, IUserRepository userRepository)
+        //public NameController(IJWTAuthenticationManager authenticationManager, IUserRepository userRepository)
+        public NameController(ICustomAuthenticationManager authenticationManager, IUserRepository userRepository)
         {
             _authenticationManager = authenticationManager;
             _userRepository = userRepository;
